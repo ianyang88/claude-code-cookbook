@@ -10,11 +10,10 @@
 
 ## 已收集的 Guides
 
-<!-- 列出 guides -->
-
 | Guide | 类型 | 说明 |
 |-------|------|------|
-| （暂无） | | 欢迎贡献 |
+| [cc-connect 远程控制](./cc-connect-remote-control.md) | 工具介绍 | 手机远程控制 Claude Code，支持飞书/钉钉/微信/Telegram |
+| [claudecodeui Web 界面](./claudecodeui-web-interface.md) | 工具介绍 | Claude Code 的 Web/移动端可视化界面 |
 
 ## Guide 模板
 
