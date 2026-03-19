@@ -1,36 +1,45 @@
 # Claude Code Cookbook 🧑‍🍳
 
-> Claude Code 中文社区的配方集 — 收集、翻译、实践
+> Claude Code 中文社区的配方集 — AI-First 设计
 
 ## 是什么
 
-这是一个面向中文用户的 Claude Code 资源集合。我们收集、翻译、整理社区优秀的 Skills、Commands、教程和案例，帮助开发者更高效地使用 Claude Code。
+这是一个 **AI-First** 的 Claude Code 资源库。与传统文档不同，本项目的目标读者是 **AI**，而非人类。
 
-## 快速导航
+### 设计理念
 
-| 目录 | 说明 | 内容 |
-|------|------|------|
-| [guides/](./guides/) | 方法论与技巧 | 心态转变、黄金工作流、大师技巧 |
-| [commands/](./commands/) | 命令详解 | 核心命令、上下文引用、IDE 集成 |
-| [tools/](./tools/) | 工具推荐 | 远程控制、Web 界面、美化定制、状态栏 |
-| [resources.md](./resources.md) | 外部资源 | 社区项目、官方文档链接 |
+- **AI 读取**：AI 读取 [CLAUDE.md](./CLAUDE.md) 即可了解所有可用资源
+- **AI 执行**：用户只需说需求，AI 自动选择合适的资源并帮助安装配置
+- **AI 解读**：详细文档包含安装方式和功能介绍，AI 可以解读并执行
+
+### 用户使用方式
+
+1. 直接告诉 AI 你的需求（如"帮我配置一个高级状态栏"）
+2. AI 读取 CLAUDE.md 找到合适的资源
+3. AI 按详细文档指引帮你安装配置
+
+无需手动阅读文档，AI 全程代劳。
+
+## 资源概览
+
+| 目录 | 说明 |
+|------|------|
+| [skills/](./skills/) | 技能包 — 工作方法论、最佳实践 |
+| [commands/](./commands/) | 斜杠命令 — 内置命令使用说明 |
+| [tools/](./tools/) | 外部工具 — 增强体验的第三方工具 |
 
 ## 精选内容
 
-### 🧠 核心心法
-- [心态转变：从写代码到管理者](./guides/mindset-shift.md)
-- [黄金三步法工作流](./guides/golden-workflow.md)
-- [大师进阶技巧](./guides/master-techniques.md)
+### Skills 技能包
+- [心态转变：从写代码到管理者](./skills/mindset-shift.md)
+- [黄金三步法工作流](./skills/golden-workflow.md)
+- [大师进阶技巧](./skills/master-techniques.md)
 
-### ⌨️ 命令速查
-- [核心命令详解](./commands/core-commands.md)
-- [上下文引用与 IDE 集成](./commands/context-reference-ide.md)
-
-### 🔧 推荐工具
-- [cc-connect 远程控制](./tools/cc-connect-remote-control.md) — 手机远程
-- [claudecodeui Web 界面](./tools/claudecodeui-web-interface.md) — 可视化
-- [tweakcc 美化定制](./tools/tweakcc-customization.md) — 主题/动画
-- [ccstatusline 状态栏](./tools/ccstatusline-usage.md) — 高级指标
+### Tools 外部工具
+- [ccstatusline](./tools/ccstatusline.md) — 高级状态栏
+- [tweakcc](./tools/tweakcc.md) — 美化定制
+- [cc-connect](./tools/cc-connect.md) — 远程控制
+- [claudecodeui](./tools/claudecodeui.md) — Web 界面
 
 ## 如何贡献
 

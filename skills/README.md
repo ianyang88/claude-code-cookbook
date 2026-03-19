@@ -1,39 +1,41 @@
-# Skills
+# Skills 技能包
 
-这里收集可复用的 Claude Code Skills 配置。
-
-## 什么是 Skill？
-
-Skill 是一个详细的 Markdown 文档，告诉 Claude 如何完成某类任务。它包含最佳实践、模式和注意事项。
-
-## 如何使用
-
-将 Skill 文件放到你的项目 `.claude/skills/` 目录下，Claude Code 会自动加载。
+工作方法论、最佳实践、进阶技巧。
 
 ## 已收集的 Skills
 
-<!-- 列出 skills -->
+| Skill | 一句话介绍 | 适用场景 |
+|-------|-----------|---------|
+| [mindset-shift](./mindset-shift.md) | 从写代码的工人变成管理者 | 想充分发挥 Claude Code 潜力 |
+| [golden-workflow](./golden-workflow.md) | 探索 → 规划 → 执行三步法 | 避免一上来就写代码 |
+| [master-techniques](./master-techniques.md) | 强迫反思、并行处理、子代理 | 进阶用户，想要更高效 |
+| [context-reference](./context-reference.md) | @ 文件引用和 IDE 集成 | 想高效传递上下文 |
 
-| Skill | 说明 |
-|-------|------|
-| （暂无） | 欢迎贡献 |
+## 如何使用
+
+将 Skill 文件复制到你的项目 `.claude/skills/` 目录，Claude Code 会自动加载。
 
 ## Skill 模板
 
 ```markdown
 # Skill 名称
 
-## 何时使用
+## 一句话介绍
 
-描述这个 Skill 适用的场景。
+[简短描述]
 
-## 如何工作
+## 适用场景
 
-详细说明 Claude 应该如何执行任务。
+- 场景 1
+- 场景 2
 
-## 示例
+## 功能介绍
 
-提供具体的代码示例。
+[详细功能说明]
+
+## 使用示例
+
+[具体示例]
 ```
 
 ---
