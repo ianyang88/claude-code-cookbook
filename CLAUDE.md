@@ -10,19 +10,6 @@ AI 可读取的资源库，帮助用户配置 Claude Code 环境。
 
 ---
 
-## Skills（技能包）
-
-工作方法论、最佳实践、进阶技巧。
-
-| Skill | 一句话介绍 | 适用场景 | 详情 |
-|-------|-----------|---------|------|
-| mindset-shift | 从写代码的工人变成管理者 | 想充分发挥 Claude Code 潜力 | [skills/mindset-shift.md](./skills/mindset-shift.md) |
-| golden-workflow | 探索 → 规划 → 执行三步法 | 避免一上来就写代码 | [skills/golden-workflow.md](./skills/golden-workflow.md) |
-| master-techniques | 强迫反思、并行处理、子代理 | 进阶用户，想要更高效 | [skills/master-techniques.md](./skills/master-techniques.md) |
-| context-reference | @ 文件引用和 IDE 集成 | 想高效传递上下文 | [skills/context-reference.md](./skills/context-reference.md) |
-
----
-
 ## Commands（斜杠命令）
 
 Claude Code 内置命令的使用说明。

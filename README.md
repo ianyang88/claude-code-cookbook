@@ -24,26 +24,40 @@
 
 | 目录 | 说明 |
 |------|------|
-| [skills/](./skills/) | 技能包 — 工作方法论、最佳实践 |
-| [commands/](./commands/) | 斜杠命令 — 内置命令使用说明 |
+| [commands/](./commands/) | 斜杠命令 — 内置命令速查表 |
 | [tools/](./tools/) | 外部工具 — 增强体验的第三方工具 |
 
-## 精选内容
+## 核心理念
 
-### Skills 技能包
-- [心态转变：从写代码到管理者](./skills/mindset-shift.md)
-- [黄金三步法工作流](./skills/golden-workflow.md)
-- [大师进阶技巧](./skills/master-techniques.md)
+### 心态转变
 
-### Tools 外部工具
-- [ccstatusline](./tools/ccstatusline.md) — 高级状态栏
-- [tweakcc](./tools/tweakcc.md) — 美化定制
-- [cc-connect](./tools/cc-connect.md) — 远程控制
-- [claudecodeui](./tools/claudecodeui.md) — Web 界面
+不要把 Claude Code 当成聊天机器人，而要当成"代理式编码者" (Agentic Coder)。
+
+| 心态 | 价值发挥 |
+|------|----------|
+| 当成 Prompt 工具 | 仅发挥 10% 的价值 |
+| 当成代理式编码者 | 发挥 100% 的潜力 |
+
+### 黄金工作流
+
+**探索 → 规划 → 执行**，不要一上来就写代码。
+
+| 错误方式 | 正确方式 |
+|---------|---------|
+| 直接说"帮我写个登录功能" | 先让 Claude 探索现有认证系统 |
+| 一上来就写代码 | 先规划，再执行 |
+| 只关注代码实现 | 关注整体用户体验 |
+
+## 精选工具
+
+- [ccstatusline](./tools/ccstatusline.md) — 高级状态栏，显示 Token/花费/上下文
+- [tweakcc](./tools/tweakcc.md) — 美化定制，自定义主题/动画
+- [cc-connect](./tools/cc-connect.md) — 远程控制，手机远程操作
+- [claudecodeui](./tools/claudecodeui.md) — Web 界面，桌面/移动端可视化
 
 ## 如何贡献
 
-欢迎分享你的 Skills、Commands 或使用经验！请阅读 [CONTRIBUTING.md](./CONTRIBUTING.md) 了解如何参与。
+欢迎分享你的工具推荐或使用经验！请阅读 [CONTRIBUTING.md](./CONTRIBUTING.md) 了解如何参与。
 
 ## 致谢
 
