@@ -15,7 +15,8 @@
 
 | 工具 | 说明 | 链接 |
 |------|------|------|
-| | | |
+| tweakcc | Claude Code 美化工具 - 自定义主题、系统提示、思考动画 | [GitHub](https://github.com/Piebald-AI/tweakcc) |
+| ccstatusline | 高级状态栏 - 显示模型信息、Git 状态、Token 用量 | [GitHub](https://github.com/sirmalloc/ccstatusline) |
 
 ## 官方资源
 
