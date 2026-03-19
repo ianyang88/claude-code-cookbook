@@ -11,7 +11,12 @@
 | verification-before-completion | 完成前强制验证 | [verification-before-completion/](./verification-before-completion/) |
 | writing-plans | 写详细实现计划 | [writing-plans/](./writing-plans/) |
 | brainstorming | 创意发散，设计方案 | [brainstorming/](./brainstorming/) |
-| subagent-driven-development | 多子代理并行执行 | [subagent-driven-development/](./subagent-driven-development/) |
+
+## 协作开发类
+
+| Skill | 用途 | 详情 |
+|-------|------|------|
+| subagent-driven-development | 多子代理并行执行任务 | [subagent-driven-development/](./subagent-driven-development/) |
 
 ## 文档处理类
 
@@ -21,6 +26,13 @@
 | docx | Word 文档创建/编辑 | [docx/](./docx/) |
 | pptx | PowerPoint 演示文稿 | [pptx/](./pptx/) |
 | xlsx | Excel 电子表格 | [xlsx/](./xlsx/) |
+
+## 工具类
+
+| Skill | 用途 | 详情 |
+|-------|------|------|
+| skill-creator | 创建新 skill 的指南 | [skill-creator/](./skill-creator/) |
+| web-artifacts-builder | 构建 claude.ai HTML artifacts | [web-artifacts-builder/](./web-artifacts-builder/) |
 
 ## 安装方式
 

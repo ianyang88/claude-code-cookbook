@@ -24,6 +24,12 @@ AI 可读取的资源库，帮助用户配置 Claude Code 环境。
 | writing-plans | 写实现计划 | 复杂任务前 | [skills/writing-plans/](./skills/writing-plans/) |
 | brainstorming | 创意发散 | 设计方案 | [skills/brainstorming/](./skills/brainstorming/) |
 
+### 协作开发类
+
+| Skill | 用途 | 适用场景 | 详情 |
+|-------|------|---------|------|
+| subagent-driven-development | 多子代理并行 | 独立任务并行执行 | [skills/subagent-driven-development/](./skills/subagent-driven-development/) |
+
 ### 文档处理类
 
 | Skill | 用途 | 适用场景 | 详情 |
@@ -32,6 +38,13 @@ AI 可读取的资源库，帮助用户配置 Claude Code 环境。
 | docx | Word 文档 | 创建/编辑 .docx | [skills/docx/](./skills/docx/) |
 | pptx | PowerPoint | 演示文稿 | [skills/pptx/](./skills/pptx/) |
 | xlsx | Excel 表格 | 电子表格处理 | [skills/xlsx/](./skills/xlsx/) |
+
+### 工具类
+
+| Skill | 用途 | 适用场景 | 详情 |
+|-------|------|---------|------|
+| skill-creator | 创建新 skill | 自定义技能包 | [skills/skill-creator/](./skills/skill-creator/) |
+| web-artifacts-builder | 构建 HTML artifacts | claude.ai 网页 | [skills/web-artifacts-builder/](./skills/web-artifacts-builder/) |
 
 ---
 
