@@ -24,6 +24,7 @@
 
 | 目录 | 说明 |
 |------|------|
+| [skills/](./skills/) | 技能包 — 可加载的开发流程和文档处理技能 |
 | [commands/](./commands/) | 斜杠命令 — 内置命令速查表 |
 | [tools/](./tools/) | 外部工具 — 增强体验的第三方工具 |
 
@@ -48,12 +49,26 @@
 | 一上来就写代码 | 先规划，再执行 |
 | 只关注代码实现 | 关注整体用户体验 |
 
-## 精选工具
+## 精选内容
 
-- [ccstatusline](./tools/ccstatusline.md) — 高级状态栏，显示 Token/花费/上下文
-- [tweakcc](./tools/tweakcc.md) — 美化定制，自定义主题/动画
-- [cc-connect](./tools/cc-connect.md) — 远程控制，手机远程操作
-- [claudecodeui](./tools/claudecodeui.md) — Web 界面，桌面/移动端可视化
+### Skills 技能包
+
+**开发流程类**：
+- test-driven-development — TDD 工作流
+- systematic-debugging — 系统化调试
+- verification-before-completion — 完成前验证
+- writing-plans — 写实现计划
+- brainstorming — 创意发散
+
+**文档处理类**：
+- pdf / docx / pptx / xlsx
+
+### Tools 外部工具
+
+- [ccstatusline](./tools/ccstatusline.md) — 高级状态栏
+- [tweakcc](./tools/tweakcc.md) — 美化定制
+- [cc-connect](./tools/cc-connect.md) — 远程控制
+- [claudecodeui](./tools/claudecodeui.md) — Web 界面
 
 ## 如何贡献
 

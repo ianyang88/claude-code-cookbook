@@ -10,6 +10,31 @@ AI 可读取的资源库，帮助用户配置 Claude Code 环境。
 
 ---
 
+## Skills（技能包）
+
+可加载的技能配置，复制到 `~/.claude/skills/` 即可使用。
+
+### 开发流程类
+
+| Skill | 用途 | 适用场景 | 详情 |
+|-------|------|---------|------|
+| test-driven-development | TDD 工作流 | 写测试先行 | [skills/test-driven-development/](./skills/test-driven-development/) |
+| systematic-debugging | 系统化调试 | Bug/测试失败时 | [skills/systematic-debugging/](./skills/systematic-debugging/) |
+| verification-before-completion | 完成前验证 | 避免假成功 | [skills/verification-before-completion/](./skills/verification-before-completion/) |
+| writing-plans | 写实现计划 | 复杂任务前 | [skills/writing-plans/](./skills/writing-plans/) |
+| brainstorming | 创意发散 | 设计方案 | [skills/brainstorming/](./skills/brainstorming/) |
+
+### 文档处理类
+
+| Skill | 用途 | 适用场景 | 详情 |
+|-------|------|---------|------|
+| pdf | PDF 处理 | 读取/合并/拆分/OCR | [skills/pdf/](./skills/pdf/) |
+| docx | Word 文档 | 创建/编辑 .docx | [skills/docx/](./skills/docx/) |
+| pptx | PowerPoint | 演示文稿 | [skills/pptx/](./skills/pptx/) |
+| xlsx | Excel 表格 | 电子表格处理 | [skills/xlsx/](./skills/xlsx/) |
+
+---
+
 ## Commands（斜杠命令）
 
 Claude Code 内置命令的使用说明。
