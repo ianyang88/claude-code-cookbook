@@ -10,6 +10,18 @@
 
 ## 已收集的 Guides
 
+### 使用技巧
+
+| Guide | 类型 | 说明 |
+|-------|------|------|
+| [核心心法：心态转变](./mindset-shift.md) | 使用技巧 | 从"写代码"到"管理者"的心态转变 |
+| [黄金三步法工作流](./golden-workflow.md) | 使用技巧 | 探索 → 规划 → 执行的最佳实践 |
+| [核心命令详解](./core-commands.md) | 使用技巧 | /init, @, /model, /compact 等高频命令 |
+| [上下文引用与 IDE 集成](./context-reference-ide.md) | 使用技巧 | @ 文件选择机制与 VS Code/IDEA 联动 |
+| [大师进阶技巧](./master-techniques.md) | 使用技巧 | 强迫反思、并行处理、子代理、Git Worktrees |
+
+### 工具介绍
+
 | Guide | 类型 | 说明 |
 |-------|------|------|
 | [cc-connect 远程控制](./cc-connect-remote-control.md) | 工具介绍 | 手机远程控制 Claude Code，支持飞书/钉钉/微信/Telegram |
