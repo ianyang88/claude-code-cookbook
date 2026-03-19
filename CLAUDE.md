@@ -48,6 +48,17 @@ AI 可读取的资源库，帮助用户配置 Claude Code 环境。
 
 ---
 
+## Plugins（插件）
+
+通过 Claude Marketplace 或手动安装的功能扩展包。
+
+| Plugin | 一句话介绍 | 适用场景 | 详情 |
+|--------|-----------|---------|------|
+| planning-with-files | 文件式规划系统 | 复杂任务、会话恢复 | [plugins/planning-with-files.md](./plugins/planning-with-files.md) |
+| ui-ux-pro-max | UI/UX 设计工具包 | 界面设计、配色、字体 | [plugins/ui-ux-pro-max.md](./plugins/ui-ux-pro-max.md) |
+
+---
+
 ## Commands（斜杠命令）
 
 Claude Code 内置命令的使用说明。
