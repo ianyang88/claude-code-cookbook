@@ -2,9 +2,16 @@
 
 > 自定义 Claude Code 的主题、系统提示、思考动画，打造个性化开发体验
 
+**适用人群**：想个性化终端外观、优化 token 消耗、定制系统提示的用户
+**前置条件**：Node.js 或 Bun
+**不适合**：不在意外观、不想修改 Claude Code 内部的保守用户
+**5 分钟体验**：`npx tweakcc` → 创建一个新主题 → Apply → 在 Claude Code 中 `/theme` 切换
+
 ## 项目简介
 
-[tweakcc](https://github.com/Piebald-AI/tweakcc) 是一个强大的 CLI 工具，通过修改 Claude Code 的 `cli.js` 文件来实现深度自定义。从视觉主题到系统提示，几乎可以定制一切。
+[tweakcc](https://github.com/Piebald-AI/tweakcc) 是一个强大的 CLI 工具，通过修改 Claude Code 的 `cli.js` 文件或原生二进制来实现深度自定义。从视觉主题到系统提示，几乎可以定制一切。
+
+> **tweakcc 4.0.0** 已发布，新增 API、自定义脚本补丁、远程配置等功能。
 
 ## 核心功能
 
@@ -17,7 +24,7 @@
 - 修改主系统提示
 - 自定义 17 个内置工具描述
 - 修改 Task/Plan/Explore 子代理提示
-- 自动处理版本更新冲突
+- 自动处理版本更新冲突（生成 HTML diff 对比）
 
 ### 🧩 工具集管理
 - 创建不同的工具集合
@@ -35,6 +42,25 @@
 - 默认展开思考块
 - 修改启动 banner
 - 手动命名会话（`/title` 或 `/rename`）
+
+### 🆕 v4.0.0 新功能
+
+| 功能 | 说明 |
+|------|------|
+| **API** | `npm i tweakcc` 集成到你的项目，编程式补丁 Claude Code |
+| **adhoc-patch** | 自定义脚本补丁，支持 `--string`/`--regex`/`--script` 三种模式 |
+| **远程配置** | `--config-url <URL>` 从 Gist/pastebin 加载配置 |
+| **unpack/repack** | 提取和重打包原生二进制中的 JS |
+| **AGENTS.md 支持** | Claude Code 回退读取 AGENTS.md、GEMINI.md 等文件 |
+| **Session Memory** | 解锁会话记忆 + `/remember` skill |
+| **输入高亮** | 自定义输入框中的正则模式高亮（颜色、样式） |
+| **Opus Plan 1M** | Plan 模式用 Opus，执行模式用 Sonnet 1M 上下文 |
+| **MCP 启动优化** | 非阻塞连接 + 并行批次，启动快 ~50% |
+| **Token 舍入** | 减少 UI 刷新频率，优化远程/慢终端体验 |
+| **状态栏节流** | 自定义状态栏更新间隔和固定节奏模式 |
+| **表格格式** | 支持 default/ascii/clean/clean-top-bottom 四种表格样式 |
+| **自动接受 Plan** | 跳过"Ready to code?"确认对话框 |
+| **子代理模型** | 为 Plan、Explore、通用子代理分别指定模型 |
 
 ## 使用场景
 
@@ -62,6 +88,20 @@ pnpm dlx tweakcc
 2. **选择功能** - 主题/系统提示/工具集等
 3. **应用更改** - 选择 `Apply customizations`
 4. **重启 Claude Code** - 享受新体验
+
+### CLI 命令
+
+| 命令 | 说明 |
+|------|------|
+| `npx tweakcc` | 交互式 TUI |
+| `npx tweakcc --apply` | 直接应用已有配置 |
+| `npx tweakcc --restore` | 恢复 Claude Code 原始状态 |
+| `npx tweakcc --config-url <URL>` | 从远程 URL 加载配置并应用 |
+| `npx tweakcc unpack <path>` | 从原生二进制提取 JS |
+| `npx tweakcc repack <path>` | 将 JS 重新打包回原生二进制 |
+| `npx tweakcc adhoc-patch --string '旧' '新'` | 字符串替换补丁 |
+| `npx tweakcc adhoc-patch --regex '/pattern/' '替换'` | 正则替换补丁 |
+| `npx tweakcc adhoc-patch --script '@script.js'` | 自定义脚本补丁 |
 
 ### 配置目录
 
@@ -154,7 +194,11 @@ claude
 
 ### 恢复默认？
 
-删除 tweakcc 备份文件后重装 Claude Code：
+```bash
+npx tweakcc --restore
+```
+
+或删除 tweakcc 备份文件后重装 Claude Code：
 
 ```bash
 rm ~/.tweakcc/cli.backup.js  # npm 安装
@@ -162,13 +206,11 @@ rm ~/.tweakcc/cli.backup.js  # npm 安装
 rm ~/.tweakcc/native-binary.backup  # 原生安装
 ```
 
-然后重装 Claude Code 并重新运行 tweakcc。
-
 ## 注意事项
 
-- ⚠️ 通过修改 `cli.js` 实现功能，更新 Claude Code 后需重新应用
+- ⚠️ 通过修改 `cli.js` / 原生二进制实现功能，更新 Claude Code 后需重新应用
 - ✅ 配置会被保留，运行 `npx tweakcc --apply` 即可恢复
-- 🔒 已验证支持 Claude Code 2.0.69+
+- 🔒 已验证支持 Claude Code 2.1.62+
 
 ## 相关链接
 
@@ -178,4 +220,4 @@ rm ~/.tweakcc/native-binary.backup  # 原生安装
 
 ---
 
-*最后更新：2026-03-19*
+*最后更新：2026-04-20*

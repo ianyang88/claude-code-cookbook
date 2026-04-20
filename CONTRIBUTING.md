@@ -17,9 +17,9 @@
 
 分享你的教程、案例或使用技巧。
 
-### 贡献 Resources
+### 贡献 Tools
 
-推荐好用的工具或项目，编辑 [resources.md](./resources.md)。
+推荐好用的第三方工具，在 `tools/` 目录下创建 `.md` 文件。
 
 ## 文件命名规范
 

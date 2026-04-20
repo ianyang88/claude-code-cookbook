@@ -2,6 +2,11 @@
 
 > 在终端底部显示模型信息、Git 状态、Token 用量等实时指标
 
+**适用人群**：所有用户 — 这是你应该安装的第一个工具
+**前置条件**：Node.js 或 Bun
+**不适合**：无（强烈推荐所有人安装）
+**5 分钟体验**：`npx -y ccstatusline@latest` → 按 `a` 添加小部件 → Install to settings → 重启 Claude Code
+
 ## 项目简介
 
 [ccstatusline](https://github.com/sirmalloc/ccstatusline) 是一个高度可定制的 Claude Code 状态栏工具。通过 TUI 界面配置，支持 Powerline 样式、多种小部件、实时指标追踪。
@@ -14,25 +19,41 @@
 
 - **模型信息** - 当前使用的 Claude 模型
 - **Token 追踪** - 输入/输出/缓存/总计 token 数
-- **Token 速度** - 每秒处理 token 数（支持滚动窗口）
+- **Token 速度** - 每秒处理 token 数（支持 0-120 秒滚动窗口）
 - **上下文使用** - 上下文窗口占用百分比
 - **会话时长** - 当前会话持续时间
 - **会话花费** - 实时 USD 花费追踪
 - **Block 计时器** - 5 小时用量块进度
+- **Session Name** - 显示 `/rename` 设置的会话名
+- **Session ID** - 当前会话 ID
 
 ### 🌳 Git 集成
 
 - **Git Branch** - 当前分支名
 - **Git Changes** - `+insertions -deletions`
+- **Git Insertions** - 仅显示插入数（如 `+42`）
+- **Git Deletions** - 仅显示删除数（如 `-10`）
 - **Git Worktree** - 当前 worktree 名称
 - **Git Root Dir** - 仓库根目录名
+
+### 📈 用量追踪
+
+- **Session Usage** - 当日/会话 API 用量百分比
+- **Weekly Usage** - 周用量百分比
+- **Block Reset Timer** - 距当前 block 重置的倒计时
+- **Weekly Reset Timer** - 距周用量重置的倒计时
+- **Context Bar** - 上下文使用进度条
+
+### 🧩 Skills 追踪
+
+- **Skills** - 显示技能活动（最近使用/总数/列表），支持列表限制和隐藏空状态
 
 ### ⚡ Powerline 支持
 
 - 美观的箭头分隔符样式
 - 自定义 Powerline 字体
-- 多行状态栏支持
-- 自动对齐
+- 无限多行状态栏支持
+- 自动对齐（列式布局）
 
 ### 🖥️ 交互式 TUI
 
@@ -40,6 +61,11 @@
 - 实时预览
 - 小部件分类选择器
 - 颜色自定义
+
+### 🔗 链接小部件
+
+- OSC 8 可点击终端超链接
+- 支持自定义 URL 和显示文本
 
 ## 可用小部件一览
 
@@ -51,6 +77,7 @@
 | **会话** | Session Clock, Session Cost, Session Name, Session ID |
 | **用量** | Session Usage, Weekly Usage, Block Timer, Block Reset Timer, Weekly Reset Timer |
 | **Git** | Branch, Changes, Insertions, Deletions, Root Dir, Worktree |
+| **Skills** | Skills（最近使用/总数/列表） |
 | **其他** | Current Working Dir, Terminal Width, Memory Usage |
 | **自定义** | Custom Text, Custom Command, Link, Separator, Flex Separator |
 
@@ -64,6 +91,9 @@ npx -y ccstatusline@latest
 
 # 使用 Bun（更快）
 bunx -y ccstatusline@latest
+
+# 自定义配置路径
+npx -y ccstatusline@latest --config /path/to/settings.json
 ```
 
 ### 配置流程
@@ -95,20 +125,22 @@ bunx -y ccstatusline@latest
 }
 ```
 
+也支持 `bunx -y ccstatusline@latest` 或全局安装后的 `ccstatusline`。
+
 ## Powerline 配置
 
 ### 启用 Powerline
 
 1. 在配置界面进入 "Powerline Setup"
 2. 启用 Powerline 模式
-3. 选择分隔符样式
+3. 选择分隔符样式（支持 4-6 位 Unicode）
 4. 安装 Powerline 字体（可选自动安装）
 
 ### Windows 字体安装
 
 ```powershell
 # 通过 winget 安装 Nerd Font
-winget install JetBrainsMono.NerdFont
+winget install DEVCOM.JetBrainsMonoNerdFont
 ```
 
 ### 终端配置
@@ -145,7 +177,7 @@ git rev-parse --short HEAD
 npx -y ccusage@latest statusline
 ```
 
-**注意**：命令超时默认 1000ms，可在编辑时按 `t` 调整。
+**注意**：命令超时默认 1000ms，可在编辑时按 `t` 调整。支持保留 ANSI 颜色（按 `p`）。
 
 ## 高级配置
 
@@ -172,6 +204,13 @@ export HTTPS_PROXY=http://proxy.example.com:8080
 自动缓存 block 指标以减少 JSONL 解析：
 - 缓存位置：`~/.cache/ccstatusline/`
 - 自动 5 小时失效
+- 按配置目录哈希分文件
+
+### 终端宽度选项
+
+- **Full width always** - 始终使用全宽（可能被 auto-compact 消息截断）
+- **Full width minus 40** - 预留 40 字符防止换行（默认）
+- **Full width until compact** - 根据上下文百分比动态切换
 
 ## 常见问题
 
@@ -202,4 +241,4 @@ VSCode 终端可能强制对比度，调整设置：
 
 ---
 
-*最后更新：2026-03-19*
+*最后更新：2026-04-20*

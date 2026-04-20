@@ -8,6 +8,7 @@
 |--------|-----------|---------|------|
 | planning-with-files | 文件式规划系统 | 复杂任务、会话恢复 | [planning-with-files.md](./planning-with-files.md) |
 | ui-ux-pro-max | UI/UX 设计工具包 | 界面设计、配色、字体 | [ui-ux-pro-max.md](./ui-ux-pro-max.md) |
+| everything-claude-code | 50K+ Stars 综合优化包 | 进阶用户一步到位 | [everything-claude-code.md](./everything-claude-code.md) |
 
 ## 安装方式
 
